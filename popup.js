@@ -27,7 +27,7 @@ const copyUrls = async () => {
 
     // Loops through the tabs and adds the url to the buffer
     tabs.forEach((tab) => {
-        output.innerHTML = tab.url;
+        //output.innerHTML = tab.url;
         clipboard_buffer = clipboard_buffer + tab.url + "\n";
     })
     clipboard_buffer = clipboard_buffer.slice(0, -1);
@@ -51,7 +51,7 @@ const pasteUrls = async () => {
             browser.tabs.create({ url: url });
         }
         catch(Error) {
-            output.innerHTML = Error;
+           // output.innerHTML = Error;
         }
     })
 
